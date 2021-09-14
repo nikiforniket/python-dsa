@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+# for decending sorted list of numbers.
+
 test_cases = [
     {'input': {'cards': [13, 11, 10, 7, 4, 3, 1, 0], 'query': 7}, 'output': 3},
     {'input': {'cards': [13, 11, 10, 7, 4, 3, 1, 0], 'query': 1}, 'output': 6},
@@ -11,6 +13,8 @@ test_cases = [
     {'input': {'cards': [8, 8, 6, 6, 6, 6, 6, 3, 2, 2, 2, 0, 0, 0], 'query': 3}, 'output': 7},
     {'input': {'cards': [8, 8, 6, 6, 6, 6, 6, 6, 3, 2, 2, 2, 0, 0, 0],'query': 6},'output': 2}
 ]
+
+heavy_test = {'input': {'cards': range(100000, 0, -1), 'query': 2}, 'output': 99998}
 
 def locate_cards(cards, query):
     position = 0
